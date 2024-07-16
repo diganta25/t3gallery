@@ -10,7 +10,7 @@ export function TopNav(){
   const router = useRouter();
 
     return (
-      <nav className="flex w-full items-center justify-between p-4 text-xl font-semibold border-b border-rose-600">
+      <nav className="flex w-full items-center justify-between p-4 text-xl font-semibold border-b border-white">
         <div>Gallery</div>
   
         <div className='flex flex-row'>
