@@ -60,8 +60,6 @@ export default async function HomePage() {
       <Images/>
      </SignedIn>
 
-    
-   
     </main>
   );
 }
