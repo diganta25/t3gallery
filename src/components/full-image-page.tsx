@@ -3,8 +3,8 @@ import { deleteImage, getImages } from "~/server/queries";
 import { Button } from "./ui/button";
 
 export default async function FullPageImageView(props: { id: number }) {
-  // const idAsNumber = Number(props.photoId);
-  if (Number.isNaN(props.id)) throw new Error("Invalid photo id");
+  const idAsNumber = Number(props.id);
+  if (Number.isNaN(idAsNumber)) throw new Error("Invalid photo id");
 
   const image = await getImages(props.id);
 
@@ -31,7 +31,7 @@ export default async function FullPageImageView(props: { id: number }) {
           <form action={async()=> {
             "use server";
 
-            await deleteImage(props.id);
+            await deleteImage(idAsNumber);
           }}>
             <span className="p-2">
               <Button type="submit" variant="destructive">Delete</Button>

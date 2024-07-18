@@ -62,10 +62,9 @@ export async function deleteImage(id: number) {
     event: "delete image",
     properties: {
       imageId: id,
-      
     },
-  })
-
+  });
+  
   // revalidatePath("/");
   redirect("/");
 }

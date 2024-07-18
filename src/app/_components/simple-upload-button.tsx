@@ -70,7 +70,7 @@ export function SimpleUploadButton() {
       posthog.capture("upload_begin")
       toast(
         <div className="flex items-center gap-2 text-white">
-          <LoadingSpinnerSVG /> <span className="text-xl items-center">Uploading...</span>
+          <LoadingSpinnerSVG /> <span className="text-base items-center">Uploading...</span>
         </div>,
         {
           duration: 100000,
